@@ -4,17 +4,24 @@ function Hero() {
   return (
     <section className={styles.hero} id="hero">
       <div className={styles.container}>
-        <div className={styles.content}>
-          <p className={styles.label}>Professional landscaping service</p>
-          <h1 className={styles.title}>
-            We create clean and beautiful outdoor spaces
-          </h1>
-          <p className={styles.text}>
-            Reliable landscaping solutions for homes and small businesses.
-          </p>
-          <a className={styles.button} href="#contact">
-            Get a quote
-          </a>
+        <div className={styles.wrapper}>
+          <div className={styles.content}>
+            <p className={styles.label}>Professional landscaping service</p>
+
+            <h1 className={styles.title}>
+              We create clean and beautiful outdoor spaces
+            </h1>
+
+            <p className={styles.text}>
+              Reliable landscaping solutions for homes and small businesses.
+            </p>
+
+            <a className={styles.button} href="#contact">
+              Get a quote
+            </a>
+          </div>
+
+          <div className={styles.imageBox}>{/* placeholder for image */}</div>
         </div>
       </div>
     </section>
