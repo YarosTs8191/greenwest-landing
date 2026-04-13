@@ -4,12 +4,6 @@
   border-bottom: 1px solid var(--color-border);
 }
 
-.container {
-  width: 100%;
-  padding: 0 16px;
-  margin: 0 auto;
-}
-
 .logo {
   display: inline-block;
   margin: 0;
@@ -169,7 +163,7 @@
 }
 
 /* === DESKTOP === */
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   .container {
     max-width: 1200px;
     margin: 0 auto;

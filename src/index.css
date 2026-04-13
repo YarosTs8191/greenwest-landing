@@ -103,7 +103,6 @@ button {
   cursor: pointer;
 }
 
-/* ===== CONTAINER (optional, but useful) ===== */
 .container {
   width: 100%;
   margin: 0 auto;
@@ -119,7 +118,7 @@ button {
 }
 
 /* desktop */
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   .container {
     max-width: 1200px;
   }

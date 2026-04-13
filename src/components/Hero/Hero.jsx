@@ -1,4 +1,5 @@
 import styles from "./Hero.module.css";
+import heroImg from "../../assets/images/portfolphot2.jpg";
 
 function Hero() {
   return (
@@ -21,7 +22,13 @@ function Hero() {
             </a>
           </div>
 
-          <div className={styles.imageBox}>{/* placeholder for image */}</div>
+          <div className={styles.imageBox}>
+            <img
+              src={heroImg}
+              alt="Landscaping work example"
+              className={styles.image}
+            />
+          </div>
         </div>
       </div>
     </section>
