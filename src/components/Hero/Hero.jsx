@@ -2,8 +2,21 @@ import styles from "./Hero.module.css";
 
 function Hero() {
   return (
-    <section className={styles.Hero}>
-      <div className={styles.Container}>Hero</div>
+    <section className={styles.hero} id="hero">
+      <div className={styles.container}>
+        <div className={styles.content}>
+          <p className={styles.label}>Professional landscaping service</p>
+          <h1 className={styles.title}>
+            We create clean and beautiful outdoor spaces
+          </h1>
+          <p className={styles.text}>
+            Reliable landscaping solutions for homes and small businesses.
+          </p>
+          <a className={styles.button} href="#contact">
+            Get a quote
+          </a>
+        </div>
+      </div>
     </section>
   );
 }
