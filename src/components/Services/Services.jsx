@@ -1,4 +1,5 @@
 import styles from "./Services.module.css";
+import { services } from "../../data/services";
 
 function Services() {
   return (
@@ -18,7 +19,19 @@ function Services() {
         </div>
 
         <div className={styles.listWrapper}>
-          {/* service cards will be added here */}
+          <ul className={styles.list}>
+            {services.map((service) => (
+              <li key={service.id} className={styles.item}>
+                <div className={styles.card}>
+                  <span className={styles.icon}>{service.icon}</span>
+
+                  <h3 className={styles.cardTitle}>{service.title}</h3>
+
+                  <p className={styles.cardText}>{service.description}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>
