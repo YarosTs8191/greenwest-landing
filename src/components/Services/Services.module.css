@@ -27,16 +27,71 @@
 }
 
 .text {
-  max-width: 600px;
+  max-width: 450px;
   font-size: 16px;
   line-height: 1.6;
   color: var(--color-text);
 }
 
 .listWrapper {
-  min-height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 20px;
+  min-height: 250px;
   border-radius: 24px;
-  background-color: rgba(102, 243, 107, 0.08);
+  background-color: var(--color-bg);
+}
+
+/* === LIST === */
+.list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.item {
+  height: 100%;
+}
+
+/* === CARD === */
+.card {
+  height: 100%;
+  padding: 24px;
+  border-radius: 24px;
+  background-color: var(--color-white);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  transition:
+    transform 250ms ease,
+    box-shadow 250ms ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* === CONTENT === */
+.icon {
+  font-size: 24px;
+}
+
+.cardTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.cardText {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--color-text);
 }
 
 @media (min-width: 768px) {
@@ -55,6 +110,10 @@
   .text {
     font-size: 18px;
   }
+
+  .list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (min-width: 1024px) {
@@ -64,5 +123,9 @@
 
   .title {
     font-size: 48px;
+  }
+
+  .list {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
