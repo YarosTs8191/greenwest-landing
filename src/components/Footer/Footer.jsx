@@ -16,7 +16,7 @@ function Footer() {
             </p>
           </div>
 
-          <div className={styles.contentFuter}>
+          <div className={styles.contentFooter}>
             <div className={styles.navBlock}>
               <h3 className={styles.subtitle}>Navigation</h3>
 

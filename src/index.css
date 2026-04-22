@@ -1,9 +1,4 @@
-/* ===== RESET ===== */
 :root {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-
   /* Colors */
   --color-primary: #7dcb7f;
   --color-primary-dark: #07a50f;
@@ -12,7 +7,7 @@
   --color-text: #1b1b1b;
   --color-bg: #f5f5f5;
   --color-white: #ffffff;
-  --color-border: #1d0909;
+  --color-border: #d9d9d9;
 
   /* Typography */
   --font-main: "Inter", sans-serif;
@@ -35,35 +30,34 @@
   padding: 0;
 }
 
-/* ===== BASE ===== */
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
   min-width: 320px;
   min-height: 100vh;
-
   font-family: var(--font-main);
   font-size: 16px;
   line-height: 1.5;
-
   color: var(--color-text);
   background-color: var(--color-bg);
-
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* ===== MEDIA ===== */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 img,
 picture {
   display: block;
   max-width: 100%;
 }
 
-/* ===== TYPOGRAPHY ===== */
 h1,
 h2,
 h3,
@@ -75,32 +69,43 @@ p {
   font-weight: inherit;
 }
 
-/* ===== LINKS ===== */
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
 
-/* ===== LISTS ===== */
 ul,
 ol {
   list-style: none;
 }
 
-/* ===== FORMS ===== */
 button,
 input,
 textarea,
 select {
   font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+input,
+textarea,
+select {
   border: none;
   outline: none;
   background: none;
 }
 
-/* ===== BUTTON ===== */
-button {
-  cursor: pointer;
+textarea {
+  resize: vertical;
+}
+
+main {
+  flex: 1;
 }
 
 .container {
@@ -109,7 +114,6 @@ button {
   padding: 0 16px;
 }
 
-/* tablet */
 @media (min-width: 768px) {
   .container {
     max-width: 768px;
@@ -117,7 +121,6 @@ button {
   }
 }
 
-/* desktop */
 @media (min-width: 1024px) {
   .container {
     max-width: 1200px;
