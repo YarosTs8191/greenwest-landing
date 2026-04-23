@@ -27,6 +27,7 @@ function Hero() {
               src={heroImg}
               alt="Completed landscaping project with decorative spiral trees"
               className={styles.image}
+              decoding="async"
             />
           </div>
         </div>

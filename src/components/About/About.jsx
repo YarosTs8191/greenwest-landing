@@ -33,7 +33,13 @@ function About() {
           </div>
 
           <div className={styles.imageBox}>
-            <img src={aboutImage} alt="Lawn service" className={styles.image} />
+            <img
+              src={aboutImage}
+              alt="Lawn service"
+              className={styles.image}
+              loading="lazy"
+              decoding="async"
+            />
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "./Contact.module.css";
 
 const initialErrors = {
@@ -11,12 +11,20 @@ const initialErrors = {
 function Contact() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isFormLocked, setIsFormLocked] = useState(false);
   const [errors, setErrors] = useState(initialErrors);
   const [toast, setToast] = useState({
     type: "",
     message: "",
   });
+  const toastTimeoutRef = useRef(null);
+
+  useEffect(() => {
+    return () => {
+      if (toastTimeoutRef.current) {
+        clearTimeout(toastTimeoutRef.current);
+      }
+    };
+  }, []);
 
   const validateForm = (formData) => {
     const newErrors = {
@@ -57,8 +65,6 @@ function Contact() {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    if (isFormLocked) return;
-
     const form = event.currentTarget;
     const formData = new FormData(form);
 
@@ -95,13 +101,16 @@ function Contact() {
         form.reset();
         setErrors(initialErrors);
         setIsSubmitted(true);
-        setIsFormLocked(true);
         setToast({
           type: "success",
           message: "Your request has been sent successfully.",
         });
 
-        setTimeout(() => {
+        if (toastTimeoutRef.current) {
+          clearTimeout(toastTimeoutRef.current);
+        }
+
+        toastTimeoutRef.current = setTimeout(() => {
           setIsSubmitted(false);
           setToast({ type: "", message: "" });
         }, 4000);
@@ -110,12 +119,18 @@ function Contact() {
           type: "error",
           message: result.message || "Something went wrong. Please try again.",
         });
+        setTimeout(() => {
+          setToast({ type: "", message: "" });
+        }, 4000);
       }
     } catch (error) {
       setToast({
         type: "error",
         message: "Network error. Please try again.",
       });
+      setTimeout(() => {
+        setToast({ type: "", message: "" });
+      }, 4000);
     } finally {
       setIsSubmitting(false);
     }
@@ -128,8 +143,8 @@ function Contact() {
           className={`${styles.toast} ${
             toast.type === "success" ? styles.toastSuccess : styles.toastError
           }`}
-          role="status"
-          aria-live="polite"
+          role={toast.type === "error" ? "alert" : "status"}
+          aria-live={toast.type === "error" ? "assertive" : "polite"}
         >
           {toast.message}
         </div>
@@ -166,10 +181,10 @@ function Contact() {
                 className={styles.input}
                 type="text"
                 name="name"
+                autoComplete="name"
                 placeholder="Your name"
                 aria-invalid={Boolean(errors.name)}
                 aria-describedby={errors.name ? "name-error" : undefined}
-                disabled={isFormLocked}
               />
               {errors.name && (
                 <span id="name-error" className={styles.errorMessage}>
@@ -184,10 +199,10 @@ function Contact() {
                 className={styles.input}
                 type="tel"
                 name="phone"
+                autoComplete="tel"
                 placeholder="Your phone number"
                 aria-invalid={Boolean(errors.phone)}
                 aria-describedby={errors.phone ? "phone-error" : undefined}
-                disabled={isFormLocked}
               />
               {errors.phone && (
                 <span id="phone-error" className={styles.errorMessage}>
@@ -204,7 +219,6 @@ function Contact() {
                 defaultValue=""
                 aria-invalid={Boolean(errors.service)}
                 aria-describedby={errors.service ? "service-error" : undefined}
-                disabled={isFormLocked}
               >
                 <option value="" disabled>
                   Select a service
@@ -226,11 +240,11 @@ function Contact() {
               <textarea
                 className={styles.textarea}
                 name="message"
+                autoComplete="off"
                 rows="5"
                 placeholder="Tell us about your project"
                 aria-invalid={Boolean(errors.message)}
                 aria-describedby={errors.message ? "message-error" : undefined}
-                disabled={isFormLocked}
               />
               {errors.message && (
                 <span id="message-error" className={styles.errorMessage}>
@@ -242,15 +256,14 @@ function Contact() {
             <button
               className={styles.button}
               type="submit"
-              disabled={isSubmitting || isFormLocked}
+              disabled={isSubmitting}
+              aria-busy={isSubmitting}
             >
               {isSubmitting ? (
                 <span className={styles.buttonContent}>
                   <span className={styles.spinner} aria-hidden="true"></span>
                   Sending...
                 </span>
-              ) : isFormLocked ? (
-                "Request sent"
               ) : (
                 "Request a quote"
               )}
