@@ -1,21 +1,21 @@
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+
 import styles from "./Header.module.css";
 
 function Header() {
-  // State to track mobile menu open/close status
-
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsOpen((prev) => !prev);
+    setIsOpen((previousState) => !previousState);
   };
 
   const closeMenu = () => {
     setIsOpen(false);
   };
 
-  // Close menu on Escape key press
-
+  // Close the mobile menu when the Escape key is pressed.
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === "Escape") {
@@ -32,14 +32,9 @@ function Header() {
     };
   }, [isOpen]);
 
-  // Prevent background scrolling when mobile menu is open
-
+  // Prevent background scrolling while the mobile menu is open.
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
+    document.body.style.overflow = isOpen ? "hidden" : "";
 
     return () => {
       document.body.style.overflow = "";
@@ -52,13 +47,13 @@ function Header() {
         <div className={styles.headerContainer}>
           <div className={styles.topBar}>
             <a className={styles.logo} href="#hero">
-              GreenWest
+              {t("header.logo")}
             </a>
 
             <button
               className={styles.burgerButton}
               type="button"
-              aria-label={isOpen ? "Close menu" : "Open menu"}
+              aria-label={isOpen ? t("header.closeMenu") : t("header.openMenu")}
               aria-expanded={isOpen}
               aria-controls="mobile-menu"
               onClick={toggleMenu}
@@ -67,28 +62,35 @@ function Header() {
             </button>
           </div>
 
-          <nav className={styles.desktopNav} aria-label="Main navigation">
+          <nav
+            className={styles.desktopNav}
+            aria-label={t("header.mainNavigation")}
+          >
             <ul className={styles.navList}>
               <li className={styles.navItem}>
-                <a href="#hero">Home</a>
+                <a href="#hero">{t("header.navigation.home")}</a>
               </li>
+
               <li className={styles.navItem}>
-                <a href="#services">Services</a>
+                <a href="#services">{t("header.navigation.services")}</a>
               </li>
+
               <li className={styles.navItem}>
-                <a href="#about">About</a>
+                <a href="#about">{t("header.navigation.about")}</a>
               </li>
+
               <li className={styles.navItem}>
-                <a href="#projects">Projects</a>
+                <a href="#projects">{t("header.navigation.projects")}</a>
               </li>
+
               <li className={styles.navItem}>
-                <a href="#contact">Contact</a>
+                <a href="#contact">{t("header.navigation.contact")}</a>
               </li>
             </ul>
           </nav>
 
           <a className={styles.headerBtn} href="#contact">
-            Request a quote
+            {t("header.quoteButton")}
           </a>
         </div>
       </div>
@@ -96,51 +98,58 @@ function Header() {
       {isOpen && (
         <div className={styles.backdrop} onClick={closeMenu}>
           <div
+            id="mobile-menu"
             className={styles.mobileMenu}
             onClick={(event) => event.stopPropagation()}
           >
             <button
               className={styles.closeButton}
               type="button"
-              aria-label="Close menu"
+              aria-label={t("header.closeMenu")}
               onClick={closeMenu}
             >
               ✕
             </button>
 
-            <nav className={styles.mobileNav} aria-label="Mobile navigation">
+            <nav
+              className={styles.mobileNav}
+              aria-label={t("header.mobileNavigation")}
+            >
               <ul className={styles.mobileNavList}>
                 <li className={styles.navItem}>
                   <a href="#hero" onClick={closeMenu}>
-                    Home
+                    {t("header.navigation.home")}
                   </a>
                 </li>
+
                 <li className={styles.navItem}>
                   <a href="#services" onClick={closeMenu}>
-                    Services
+                    {t("header.navigation.services")}
                   </a>
                 </li>
+
                 <li className={styles.navItem}>
                   <a href="#about" onClick={closeMenu}>
-                    About
+                    {t("header.navigation.about")}
                   </a>
                 </li>
+
                 <li className={styles.navItem}>
                   <a href="#projects" onClick={closeMenu}>
-                    Projects
+                    {t("header.navigation.projects")}
                   </a>
                 </li>
 
                 <li className={styles.navItem}>
                   <a href="#contact" onClick={closeMenu}>
-                    Contact
+                    {t("header.navigation.contact")}
                   </a>
                 </li>
               </ul>
             </nav>
 
             <a className={styles.mobileBtn} href="#contact" onClick={closeMenu}>
-              Get a quote
+              {t("header.mobileQuoteButton")}
             </a>
           </div>
         </div>

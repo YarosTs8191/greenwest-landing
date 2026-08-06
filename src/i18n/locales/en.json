@@ -1,0 +1,18 @@
+{
+  "header": {
+    "logo": "GreenWest",
+    "mainNavigation": "Main navigation",
+    "mobileNavigation": "Mobile navigation",
+    "navigation": {
+      "home": "Home",
+      "services": "Services",
+      "about": "About",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "quoteButton": "Request a quote",
+    "mobileQuoteButton": "Get a quote",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  }
+}
