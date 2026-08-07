@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import styles from "./Header.module.css";
 
 function Header() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -13,6 +13,10 @@ function Header() {
 
   const closeMenu = () => {
     setIsOpen(false);
+  };
+
+  const changeLanguage = (language) => {
+    i18n.changeLanguage(language);
   };
 
   // Close the mobile menu when the Escape key is pressed.
@@ -89,9 +93,46 @@ function Header() {
             </ul>
           </nav>
 
-          <a className={styles.headerBtn} href="#contact">
-            {t("header.quoteButton")}
-          </a>
+          <div className={styles.actions}>
+            <div
+              className={styles.languageSwitcher}
+              aria-label="Language switcher"
+            >
+              <button
+                type="button"
+                className={
+                  i18n.language === "en" ? styles.activeLanguage : undefined
+                }
+                onClick={() => changeLanguage("en")}
+              >
+                EN
+              </button>
+
+              <button
+                type="button"
+                className={
+                  i18n.language === "es" ? styles.activeLanguage : undefined
+                }
+                onClick={() => changeLanguage("es")}
+              >
+                ES
+              </button>
+
+              <button
+                type="button"
+                className={
+                  i18n.language === "ca" ? styles.activeLanguage : undefined
+                }
+                onClick={() => changeLanguage("ca")}
+              >
+                CA
+              </button>
+            </div>
+
+            <a className={styles.headerBtn} href="#contact">
+              {t("header.quoteButton")}
+            </a>
+          </div>
         </div>
       </div>
 
