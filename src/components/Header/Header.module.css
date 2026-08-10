@@ -91,6 +91,12 @@
   align-items: center;
 }
 
+.mobileActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 /* === BURGER BUTTON === */
 .burgerButton {
   font-size: 28px;
@@ -184,13 +190,39 @@
     color 550ms ease;
 }
 
+/* -----------Mobile-specific overrides----------*/
+
+.mobileLanguageSwitcher {
+  padding: 2px;
+  gap: 2px;
+}
+
+.mobileLanguageSwitcher button {
+  padding: 6px 7px;
+  font-size: 12px;
+}
+
 /* === TABLET === */
+@media (min-width: 468px) {
+  .mobileActions {
+    gap: 24px;
+  }
+}
+
 @media (min-width: 1024px) {
   .headerContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+  .mobileLanguageSwitcher {
+    display: none;
+  }
+
+  .mobileActions {
+    display: none;
+  }
+
   .burgerButton {
     display: none;
   }

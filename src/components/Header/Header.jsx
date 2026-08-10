@@ -54,16 +54,55 @@ function Header() {
               {t("header.logo")}
             </a>
 
-            <button
-              className={styles.burgerButton}
-              type="button"
-              aria-label={isOpen ? t("header.closeMenu") : t("header.openMenu")}
-              aria-expanded={isOpen}
-              aria-controls="mobile-menu"
-              onClick={toggleMenu}
-            >
-              ☰
-            </button>
+            <div className={styles.mobileActions}>
+              <div
+                className={`${styles.languageSwitcher} ${styles.mobileLanguageSwitcher}`}
+                aria-label="Language switcher"
+              >
+                <button
+                  type="button"
+                  className={
+                    i18n.language === "en" ? styles.activeLanguage : undefined
+                  }
+                  onClick={() => changeLanguage("en")}
+                >
+                  EN
+                </button>
+
+                <button
+                  type="button"
+                  className={
+                    i18n.language === "es" ? styles.activeLanguage : undefined
+                  }
+                  onClick={() => changeLanguage("es")}
+                >
+                  ES
+                </button>
+
+                <button
+                  type="button"
+                  className={
+                    i18n.language === "ca" ? styles.activeLanguage : undefined
+                  }
+                  onClick={() => changeLanguage("ca")}
+                >
+                  CA
+                </button>
+              </div>
+
+              <button
+                className={styles.burgerButton}
+                type="button"
+                aria-label={
+                  isOpen ? t("header.closeMenu") : t("header.openMenu")
+                }
+                aria-expanded={isOpen}
+                aria-controls="mobile-menu"
+                onClick={toggleMenu}
+              >
+                ☰
+              </button>
+            </div>
           </div>
 
           <nav
