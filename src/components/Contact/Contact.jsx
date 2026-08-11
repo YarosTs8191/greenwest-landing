@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./Contact.module.css";
+import { useTranslation } from "react-i18next";
 
 const initialErrors = {
   name: "",
@@ -9,6 +10,7 @@ const initialErrors = {
 };
 
 function Contact() {
+  const { t } = useTranslation();
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState(initialErrors);
@@ -41,23 +43,23 @@ function Contact() {
     const message = (formData.get("message") || "").trim();
 
     if (!name) {
-      newErrors.name = "Please enter your name.";
+      newErrors.name = t("contact.validation.nameRequired");
     }
 
     if (!phone) {
-      newErrors.phone = "Please enter your phone number.";
+      newErrors.phone = t("contact.validation.phoneRequired");
     } else if (!/^[+\d\s()-]{7,20}$/.test(phone)) {
-      newErrors.phone = "Please enter a valid phone number.";
+      newErrors.phone = t("contact.validation.phoneInvalid");
     }
 
     if (!service) {
-      newErrors.service = "Please select a service.";
+      newErrors.service = t("contact.validation.serviceRequired");
     }
 
     if (!message) {
-      newErrors.message = "Please enter your message.";
+      newErrors.message = t("contact.validation.messageRequired");
     } else if (message.length < 10) {
-      newErrors.message = "Message should be at least 10 characters long.";
+      newErrors.message = t("contact.validation.messageTooShort");
     }
 
     return newErrors;
@@ -69,7 +71,10 @@ function Contact() {
     }
 
     toastTimeoutRef.current = setTimeout(() => {
-      setToast({ type: "", message: "" });
+      setToast({
+        type: "success",
+        message: t("contact.toast.success"),
+      });
       setIsSubmitted(false);
     }, 4000);
   };
@@ -115,20 +120,20 @@ function Contact() {
         setIsSubmitted(true);
         setToast({
           type: "success",
-          message: "Your request has been sent successfully.",
+          message: t("contact.toast.success"),
         });
         clearToastAfterDelay();
       } else {
         setToast({
           type: "error",
-          message: result.message || "Something went wrong. Please try again.",
+          message: result.message || t("contact.toast.error"),
         });
         clearToastAfterDelay();
       }
     } catch (error) {
       setToast({
         type: "error",
-        message: "Network error. Please try again.",
+        message: t("contact.toast.networkError"),
       });
       clearToastAfterDelay();
     } finally {
@@ -153,16 +158,11 @@ function Contact() {
       <div className="container">
         <div className={styles.wrapper}>
           <div className={styles.content}>
-            <p className={styles.label}>Contact us</p>
+            <p className={styles.label}>{t("contact.label")}</p>
 
-            <h2 className={styles.title}>
-              Let’s talk about your outdoor space
-            </h2>
+            <h2 className={styles.title}>{t("contact.title")}</h2>
 
-            <p className={styles.text}>
-              Get in touch to discuss your project, ask a question, or request a
-              quote for landscaping services.
-            </p>
+            <p className={styles.text}>{t("contact.text")}</p>
           </div>
 
           <form className={styles.form} onSubmit={handleSubmit} noValidate>
@@ -176,16 +176,20 @@ function Contact() {
             />
 
             <label className={styles.field}>
-              <span className={styles.fieldLabel}>Name</span>
+              <span className={styles.fieldLabel}>
+                {t("contact.form.name.label")}
+              </span>
+
               <input
                 className={styles.input}
                 type="text"
                 name="name"
                 autoComplete="name"
-                placeholder="Your name"
+                placeholder={t("contact.form.name.placeholder")}
                 aria-invalid={Boolean(errors.name)}
                 aria-describedby={errors.name ? "name-error" : undefined}
               />
+
               {errors.name && (
                 <span id="name-error" className={styles.errorMessage}>
                   {errors.name}
@@ -194,16 +198,20 @@ function Contact() {
             </label>
 
             <label className={styles.field}>
-              <span className={styles.fieldLabel}>Phone</span>
+              <span className={styles.fieldLabel}>
+                {t("contact.form.phone.label")}
+              </span>
+
               <input
                 className={styles.input}
                 type="tel"
                 name="phone"
                 autoComplete="tel"
-                placeholder="Your phone number"
+                placeholder={t("contact.form.phone.placeholder")}
                 aria-invalid={Boolean(errors.phone)}
                 aria-describedby={errors.phone ? "phone-error" : undefined}
               />
+
               {errors.phone && (
                 <span id="phone-error" className={styles.errorMessage}>
                   {errors.phone}
@@ -212,7 +220,10 @@ function Contact() {
             </label>
 
             <label className={styles.field}>
-              <span className={styles.fieldLabel}>Service</span>
+              <span className={styles.fieldLabel}>
+                {t("contact.form.service.label")}
+              </span>
+
               <select
                 className={styles.select}
                 name="service"
@@ -221,13 +232,26 @@ function Contact() {
                 aria-describedby={errors.service ? "service-error" : undefined}
               >
                 <option value="" disabled>
-                  Select a service
+                  {t("contact.form.service.placeholder")}
                 </option>
-                <option value="lawn care">Lawn care</option>
-                <option value="garden design">Garden design</option>
-                <option value="tree trimming">Tree trimming</option>
-                <option value="full landscaping">Full landscaping</option>
+
+                <option value="lawn care">
+                  {t("contact.form.service.options.lawnCare")}
+                </option>
+
+                <option value="garden design">
+                  {t("contact.form.service.options.gardenDesign")}
+                </option>
+
+                <option value="tree trimming">
+                  {t("contact.form.service.options.treeTrimming")}
+                </option>
+
+                <option value="full landscaping">
+                  {t("contact.form.service.options.fullLandscaping")}
+                </option>
               </select>
+
               {errors.service && (
                 <span id="service-error" className={styles.errorMessage}>
                   {errors.service}
@@ -236,16 +260,20 @@ function Contact() {
             </label>
 
             <label className={styles.field}>
-              <span className={styles.fieldLabel}>Message</span>
+              <span className={styles.fieldLabel}>
+                {t("contact.form.message.label")}
+              </span>
+
               <textarea
                 className={styles.textarea}
                 name="message"
                 autoComplete="off"
                 rows="5"
-                placeholder="Tell us about your project"
+                placeholder={t("contact.form.message.placeholder")}
                 aria-invalid={Boolean(errors.message)}
                 aria-describedby={errors.message ? "message-error" : undefined}
               />
+
               {errors.message && (
                 <span id="message-error" className={styles.errorMessage}>
                   {errors.message}
@@ -262,10 +290,10 @@ function Contact() {
               {isSubmitting ? (
                 <span className={styles.buttonContent}>
                   <span className={styles.spinner} aria-hidden="true"></span>
-                  Sending...
+                  {t("contact.button.sending")}
                 </span>
               ) : (
-                "Request a quote"
+                t("contact.button.submit")
               )}
             </button>
           </form>

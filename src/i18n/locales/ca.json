@@ -45,5 +45,85 @@
         "description": "Serveis de neteja a la primavera i a la tardor per retirar fulles i restes i recuperar l'ordre visual de l'espai."
       }
     }
+  },
+  "about": {
+    "label": "Sobre nosaltres",
+    "title": "Serveis de jardineria fiables que transformen el teu espai exterior",
+    "text1": "Amb experiència pràctica real en jardineria, entenem com n'és d'important mantenir els espais exteriors funcionals i visualment atractius.",
+    "text2": "Ens centrem a oferir un servei fiable, una comunicació clara i resultats que facin que el teu espai es vegi net, ordenat i ben cuidat.",
+    "items": {
+      "experience": "Experiència pràctica en el sector",
+      "results": "Resultats nets i consistents",
+      "clientNeeds": "Atenció a les necessitats del client"
+    },
+    "imageAlt": "Servei de jardineria"
+  },
+  "projects": {
+    "label": "La nostra feina",
+    "title": "Projectes reals de jardineria que hem realitzat",
+    "text": "Descobreix alguns dels espais exteriors que hem transformat amb treball pràctic i atenció als detalls.",
+
+    "images": {
+      "project1": "Projecte de jardineria acabat amb la gespa ben tallada",
+      "project2": "Zona de jardí amb tanques podades i un disseny net",
+      "project3": "Resultat de jardineria exterior amb un espai verd ordenat",
+      "project4": "Jardí mantingut amb plantació equilibrada i cura de la gespa",
+      "project5": "Gespa ben cuidada amb vores netes i herba acabada de tallar",
+      "project6": "Tanques podades que creen un jardí estructurat i ordenat",
+      "project7": "Pati enjardinat amb vegetació equilibrada i espai obert",
+      "project8": "Zona de jardí ben cuidada amb línies netes i simetria",
+      "project9": "Espai exterior després de la cura de la gespa amb herba uniforme i fresca",
+      "project10": "Jardí verd amb plantes podades i una distribució ordenada",
+      "project11": "Projecte de jardineria acabat amb un disseny net i definit",
+      "project12": "Zona exterior mantinguda amb gespa saludable i vores cuidades",
+      "project13": "Jardí net i ordenat després d'un manteniment professional de la gespa"
+    }
+  },
+  "contact": {
+    "label": "Contacta amb nosaltres",
+    "title": "Parlem del teu espai exterior",
+    "text": "Posa't en contacte per parlar del teu projecte, fer una pregunta o sol·licitar un pressupost per a serveis de jardineria.",
+
+    "form": {
+      "name": {
+        "label": "Nom",
+        "placeholder": "El teu nom"
+      },
+      "phone": {
+        "label": "Telèfon",
+        "placeholder": "El teu número de telèfon"
+      },
+      "service": {
+        "label": "Servei",
+        "placeholder": "Selecciona un servei",
+        "options": {
+          "lawnCare": "Cura de la gespa",
+          "gardenDesign": "Disseny de jardins",
+          "treeTrimming": "Poda d'arbres",
+          "fullLandscaping": "Jardineria completa"
+        }
+      },
+      "message": {
+        "label": "Missatge",
+        "placeholder": "Explica'ns el teu projecte"
+      }
+    },
+    "validation": {
+      "nameRequired": "Si us plau, introdueix el teu nom.",
+      "phoneRequired": "Si us plau, introdueix el teu número de telèfon.",
+      "phoneInvalid": "Si us plau, introdueix un número de telèfon vàlid.",
+      "serviceRequired": "Si us plau, selecciona un servei.",
+      "messageRequired": "Si us plau, escriu el teu missatge.",
+      "messageTooShort": "El missatge ha de tenir almenys 10 caràcters."
+    },
+    "button": {
+      "submit": "Sol·licita pressupost",
+      "sending": "Enviant..."
+    },
+    "toast": {
+      "success": "La teva sol·licitud s'ha enviat correctament.",
+      "error": "Alguna cosa ha anat malament. Torna-ho a provar.",
+      "networkError": "Error de xarxa. Torna-ho a provar."
+    }
   }
 }

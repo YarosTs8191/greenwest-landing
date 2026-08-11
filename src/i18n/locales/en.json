@@ -46,5 +46,85 @@
         "description": "Spring and autumn cleanup services to remove leaves, debris, and restore visual order."
       }
     }
+  },
+  "about": {
+    "label": "About us",
+    "title": "Reliable landscaping services that transform your outdoor space",
+    "text1": "With real hands-on experience in landscaping, we understand how important it is to keep outdoor spaces both practical and visually appealing.",
+    "text2": "We focus on delivering reliable service, clear communication, and results that make your space look clean, organized, and well-maintained.",
+    "items": {
+      "experience": "Hands-on industry experience",
+      "results": "Clean and consistent results",
+      "clientNeeds": "Attention to client needs"
+    },
+    "imageAlt": "Lawn service"
+  },
+  "projects": {
+    "label": "Our work",
+    "title": "Real landscaping projects we have completed",
+    "text": "Take a look at some of the outdoor spaces we have transformed through practical work and attention to detail.",
+
+    "images": {
+      "project1": "Completed landscaping project with neatly cut lawn",
+      "project2": "Garden area with trimmed hedges and clean layout",
+      "project3": "Outdoor landscaping result with tidy green space",
+      "project4": "Maintained yard with balanced planting and lawn care",
+      "project5": "Neatly maintained lawn with clean edges and fresh cut grass",
+      "project6": "Trimmed hedges creating a structured and tidy garden look",
+      "project7": "Landscaped backyard with balanced greenery and open space",
+      "project8": "Well-maintained garden area with clean lines and symmetry",
+      "project9": "Outdoor space after lawn care with even and fresh grass",
+      "project10": "Green yard with trimmed plants and organized layout",
+      "project11": "Finished landscaping project with clear and clean design",
+      "project12": "Maintained outdoor area with healthy grass and neat borders",
+      "project13": "Clean and tidy garden after professional lawn maintenance"
+    }
+  },
+  "contact": {
+    "label": "Contact us",
+    "title": "Let’s talk about your outdoor space",
+    "text": "Get in touch to discuss your project, ask a question, or request a quote for landscaping services.",
+
+    "form": {
+      "name": {
+        "label": "Name",
+        "placeholder": "Your name"
+      },
+      "phone": {
+        "label": "Phone",
+        "placeholder": "Your phone number"
+      },
+      "service": {
+        "label": "Service",
+        "placeholder": "Select a service",
+        "options": {
+          "lawnCare": "Lawn care",
+          "gardenDesign": "Garden design",
+          "treeTrimming": "Tree trimming",
+          "fullLandscaping": "Full landscaping"
+        }
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Tell us about your project"
+      }
+    },
+    "validation": {
+      "nameRequired": "Please enter your name.",
+      "phoneRequired": "Please enter your phone number.",
+      "phoneInvalid": "Please enter a valid phone number.",
+      "serviceRequired": "Please select a service.",
+      "messageRequired": "Please enter your message.",
+      "messageTooShort": "Message should be at least 10 characters long."
+    },
+    "button": {
+      "submit": "Request a quote",
+      "sending": "Sending..."
+    },
+    "toast": {
+      "success": "Your request has been sent successfully.",
+      "error": "Something went wrong. Please try again.",
+      "networkError": "Network error. Please try again."
+    }
   }
 }
