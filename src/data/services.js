@@ -1,30 +1,26 @@
 export const services = [
   {
     id: 1,
-    title: "Lawn Care",
-    description:
-      "Regular mowing, edging, and lawn maintenance to keep your outdoor space neat and healthy.",
+    titleKey: "services.cards.lawnCare.title",
+    descriptionKey: "services.cards.lawnCare.description",
     icon: "🌿",
   },
   {
     id: 2,
-    title: "Hedge Trimming",
-    description:
-      "Accurate hedge and shrub trimming for a clean look and better plant shape throughout the season.",
+    titleKey: "services.cards.hedgeTrimming.title",
+    descriptionKey: "services.cards.hedgeTrimming.description",
     icon: "✂️",
   },
   {
     id: 3,
-    title: "Garden Design",
-    description:
-      "Thoughtful garden planning and planting solutions tailored to the size and style of your yard.",
+    titleKey: "services.cards.gardenDesign.title",
+    descriptionKey: "services.cards.gardenDesign.description",
     icon: "🌱",
   },
   {
     id: 4,
-    title: "Seasonal Cleanup",
-    description:
-      "Spring and autumn cleanup services to remove leaves, debris, and restore visual order.",
+    titleKey: "services.cards.seasonalCleanup.title",
+    descriptionKey: "services.cards.seasonalCleanup.description",
     icon: "🍂",
   },
 ];

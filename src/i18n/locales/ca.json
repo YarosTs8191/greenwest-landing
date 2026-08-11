@@ -21,5 +21,29 @@
     "text": "Solucions de jardineria fiables per a llars i petits negocis.",
     "cta": "Sol·licita un pressupost",
     "imageAlt": "Projecte de jardineria acabat amb arbres decoratius en espiral"
+  },
+  "services": {
+    "label": "Els nostres serveis",
+    "title": "Solucions de jardineria adaptades al teu espai exterior",
+    "text": "Oferim serveis de jardineria pràctics i cuidats per a llars i petits negocis.",
+
+    "cards": {
+      "lawnCare": {
+        "title": "Cura de la gespa",
+        "description": "Tall regular, perfilat de vores i manteniment de la gespa per mantenir l'espai exterior net i saludable."
+      },
+      "hedgeTrimming": {
+        "title": "Poda de tanques",
+        "description": "Poda precisa de tanques i arbustos per aconseguir un aspecte net i mantenir una bona forma durant tota la temporada."
+      },
+      "gardenDesign": {
+        "title": "Disseny de jardins",
+        "description": "Planificació i solucions de plantació adaptades a la mida i l'estil del teu jardí."
+      },
+      "seasonalCleanup": {
+        "title": "Neteja estacional",
+        "description": "Serveis de neteja a la primavera i a la tardor per retirar fulles i restes i recuperar l'ordre visual de l'espai."
+      }
+    }
   }
 }

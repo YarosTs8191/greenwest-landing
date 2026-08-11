@@ -22,5 +22,29 @@
     "text": "Reliable landscaping solutions for homes and small businesses.",
     "cta": "Request a quote",
     "imageAlt": "Completed landscaping project with decorative spiral trees"
+  },
+  "services": {
+    "label": "Our services",
+    "title": "Landscaping solutions tailored to your outdoor space",
+    "text": "We provide practical and visually clean landscaping services for homes and small businesses.",
+
+    "cards": {
+      "lawnCare": {
+        "title": "Lawn Care",
+        "description": "Regular mowing, edging, and lawn maintenance to keep your outdoor space neat and healthy."
+      },
+      "hedgeTrimming": {
+        "title": "Hedge Trimming",
+        "description": "Accurate hedge and shrub trimming for a clean look and better plant shape throughout the season."
+      },
+      "gardenDesign": {
+        "title": "Garden Design",
+        "description": "Thoughtful garden planning and planting solutions tailored to the size and style of your yard."
+      },
+      "seasonalCleanup": {
+        "title": "Seasonal Cleanup",
+        "description": "Spring and autumn cleanup services to remove leaves, debris, and restore visual order."
+      }
+    }
   }
 }
