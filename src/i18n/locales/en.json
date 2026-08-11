@@ -126,5 +126,20 @@
       "error": "Something went wrong. Please try again.",
       "networkError": "Network error. Please try again."
     }
+  },
+  "footer": {
+    "description": "Practical landscaping services with attention to detail, clean results, and a modern approach.",
+    "navigationTitle": "Navigation",
+    "navigation": {
+      "home": "Home",
+      "services": "Services",
+      "about": "About",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "contactTitle": "Contact",
+    "phoneAria": "Call GreenWest at plus 34 624 82 19 48",
+    "emailAria": "Send email to GreenWest",
+    "copyright": "© 2026 GreenWest. All rights reserved."
   }
 }

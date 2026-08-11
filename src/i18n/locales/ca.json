@@ -125,5 +125,20 @@
       "error": "Alguna cosa ha anat malament. Torna-ho a provar.",
       "networkError": "Error de xarxa. Torna-ho a provar."
     }
+  },
+  "footer": {
+    "description": "Serveis de jardineria pràctics amb atenció als detalls, resultats nets i un enfocament modern.",
+    "navigationTitle": "Navegació",
+    "navigation": {
+      "home": "Inici",
+      "services": "Serveis",
+      "about": "Sobre nosaltres",
+      "projects": "Projectes",
+      "contact": "Contacte"
+    },
+    "contactTitle": "Contacte",
+    "phoneAria": "Truca a GreenWest al més 34 624 82 19 48",
+    "emailAria": "Envia un correu electrònic a GreenWest",
+    "copyright": "© 2026 GreenWest. Tots els drets reservats."
   }
 }

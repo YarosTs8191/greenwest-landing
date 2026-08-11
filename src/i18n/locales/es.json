@@ -127,5 +127,20 @@
       "error": "Algo salió mal. Por favor, inténtalo de nuevo.",
       "networkError": "Error de red. Por favor, inténtalo de nuevo."
     }
+  },
+  "footer": {
+    "description": "Servicios de jardinería prácticos con atención al detalle, resultados limpios y un enfoque moderno.",
+    "navigationTitle": "Navegación",
+    "navigation": {
+      "home": "Inicio",
+      "services": "Servicios",
+      "about": "Sobre nosotros",
+      "projects": "Proyectos",
+      "contact": "Contacto"
+    },
+    "contactTitle": "Contacto",
+    "phoneAria": "Llamar a GreenWest al más 34 624 82 19 48",
+    "emailAria": "Enviar un correo electrónico a GreenWest",
+    "copyright": "© 2026 GreenWest. Todos los derechos reservados."
   }
 }
