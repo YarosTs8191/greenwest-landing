@@ -18,13 +18,18 @@ i18n.use(initReactI18next).init({
     },
   },
 
-  lng: "en",
+  lng: localStorage.getItem("language") || "en",
   fallbackLng: "en",
   supportedLngs: ["en", "es", "ca"],
 
   interpolation: {
     escapeValue: false,
   },
+});
+document.documentElement.lang = i18n.language;
+
+i18n.on("languageChanged", (language) => {
+  document.documentElement.lang = language;
 });
 
 export default i18n;

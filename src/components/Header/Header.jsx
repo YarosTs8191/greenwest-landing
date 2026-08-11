@@ -17,6 +17,7 @@ function Header() {
 
   const changeLanguage = (language) => {
     i18n.changeLanguage(language);
+    localStorage.setItem("language", language);
   };
 
   // Close the mobile menu when the Escape key is pressed.

@@ -14,5 +14,13 @@
     "mobileQuoteButton": "Pedir presupuesto",
     "openMenu": "Abrir menú",
     "closeMenu": "Cerrar menú"
+  },
+
+  "hero": {
+    "label": "Servicio profesional de jardinería",
+    "title": "Creamos espacios exteriores limpios y atractivos",
+    "text": "Soluciones de jardinería fiables para hogares y pequeños negocios.",
+    "cta": "Solicitar presupuesto",
+    "imageAlt": "Proyecto de jardinería terminado con árboles decorativos en espiral"
   }
 }

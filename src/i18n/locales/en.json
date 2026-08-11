@@ -14,5 +14,13 @@
     "mobileQuoteButton": "Get a quote",
     "openMenu": "Open menu",
     "closeMenu": "Close menu"
+  },
+
+  "hero": {
+    "label": "Professional landscaping service",
+    "title": "We create clean and beautiful outdoor spaces",
+    "text": "Reliable landscaping solutions for homes and small businesses.",
+    "cta": "Request a quote",
+    "imageAlt": "Completed landscaping project with decorative spiral trees"
   }
 }

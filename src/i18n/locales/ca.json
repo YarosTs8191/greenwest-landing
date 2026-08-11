@@ -14,5 +14,12 @@
     "mobileQuoteButton": "Demana pressupost",
     "openMenu": "Obre el menú",
     "closeMenu": "Tanca el menú"
+  },
+  "hero": {
+    "label": "Servei professional de jardineria",
+    "title": "Creem espais exteriors nets i atractius",
+    "text": "Solucions de jardineria fiables per a llars i petits negocis.",
+    "cta": "Sol·licita un pressupost",
+    "imageAlt": "Projecte de jardineria acabat amb arbres decoratius en espiral"
   }
 }
