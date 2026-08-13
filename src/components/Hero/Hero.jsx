@@ -1,31 +1,31 @@
+import { useTranslation } from "react-i18next";
+
 import styles from "./Hero.module.css";
 import heroImg from "../../assets/images/portfolphot2.jpg";
 
 function Hero() {
+  const { t } = useTranslation();
+
   return (
     <section className={styles.hero} id="hero">
       <div className="container">
         <div className={styles.wrapper}>
           <div className={styles.content}>
-            <p className={styles.label}>Professional landscaping service</p>
+            <p className={styles.label}>{t("hero.label")}</p>
 
-            <h1 className={styles.title}>
-              We create clean and beautiful outdoor spaces
-            </h1>
+            <h1 className={styles.title}>{t("hero.title")}</h1>
 
-            <p className={styles.text}>
-              Reliable landscaping solutions for homes and small businesses.
-            </p>
+            <p className={styles.text}>{t("hero.text")}</p>
 
             <a className={styles.button} href="#contact">
-              Request a quote
+              {t("hero.cta")}
             </a>
           </div>
 
           <div className={styles.imageBox}>
             <img
               src={heroImg}
-              alt="Completed landscaping project with decorative spiral trees"
+              alt={t("hero.imageAlt")}
               className={styles.image}
               decoding="async"
             />

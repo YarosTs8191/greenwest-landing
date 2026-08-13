@@ -1,0 +1,146 @@
+{
+  "header": {
+    "logo": "GreenWest",
+    "mainNavigation": "Navegación principal",
+    "mobileNavigation": "Navegación móvil",
+    "navigation": {
+      "home": "Inicio",
+      "services": "Servicios",
+      "about": "Nosotros",
+      "projects": "Proyectos",
+      "contact": "Contacto"
+    },
+    "quoteButton": "Solicitar presupuesto",
+    "mobileQuoteButton": "Pedir presupuesto",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú"
+  },
+
+  "hero": {
+    "label": "Servicio profesional de jardinería",
+    "title": "Creamos espacios exteriores limpios y atractivos",
+    "text": "Soluciones de jardinería fiables para hogares y pequeños negocios.",
+    "cta": "Solicitar presupuesto",
+    "imageAlt": "Proyecto de jardinería terminado con árboles decorativos en espiral"
+  },
+
+  "services": {
+    "label": "Nuestros servicios",
+    "title": "Soluciones de jardinería adaptadas a tu espacio exterior",
+    "text": "Ofrecemos servicios de jardinería prácticos y cuidados para hogares y pequeños negocios.",
+
+    "cards": {
+      "lawnCare": {
+        "title": "Cuidado del césped",
+        "description": "Corte regular, perfilado de bordes y mantenimiento del césped para mantener tu espacio exterior limpio y saludable."
+      },
+      "hedgeTrimming": {
+        "title": "Poda de setos",
+        "description": "Poda precisa de setos y arbustos para conseguir una apariencia limpia y mantener una buena forma durante toda la temporada."
+      },
+      "gardenDesign": {
+        "title": "Diseño de jardines",
+        "description": "Planificación y soluciones de plantación adaptadas al tamaño y estilo de tu jardín."
+      },
+      "seasonalCleanup": {
+        "title": "Limpieza estacional",
+        "description": "Servicios de limpieza en primavera y otoño para retirar hojas y restos y recuperar el orden visual del espacio."
+      }
+    }
+  },
+  "about": {
+    "label": "Sobre nosotros",
+    "title": "Servicios de jardinería fiables que transforman tu espacio exterior",
+    "text1": "Con experiencia práctica real en jardinería, entendemos lo importante que es mantener los espacios exteriores funcionales y visualmente atractivos.",
+    "text2": "Nos centramos en ofrecer un servicio fiable, una comunicación clara y resultados que hagan que tu espacio se vea limpio, ordenado y bien cuidado.",
+    "items": {
+      "experience": "Experiencia práctica en el sector",
+      "results": "Resultados limpios y consistentes",
+      "clientNeeds": "Atención a las necesidades del cliente"
+    },
+    "imageAlt": "Servicio de jardinería"
+  },
+  "projects": {
+    "label": "Nuestro trabajo",
+    "title": "Proyectos reales de jardinería que hemos realizado",
+    "text": "Descubre algunos de los espacios exteriores que hemos transformado con trabajo práctico y atención al detalle.",
+
+    "images": {
+      "project1": "Proyecto de jardinería terminado con césped recién cortado",
+      "project2": "Zona de jardín con setos podados y un diseño limpio",
+      "project3": "Resultado de jardinería exterior con un espacio verde ordenado",
+      "project4": "Jardín mantenido con plantación equilibrada y cuidado del césped",
+      "project5": "Césped bien cuidado con bordes limpios y hierba recién cortada",
+      "project6": "Setos podados que crean un jardín estructurado y ordenado",
+      "project7": "Patio ajardinado con vegetación equilibrada y espacio abierto",
+      "project8": "Zona de jardín bien cuidada con líneas limpias y simetría",
+      "project9": "Espacio exterior después del cuidado del césped con hierba uniforme y fresca",
+      "project10": "Jardín verde con plantas podadas y una distribución ordenada",
+      "project11": "Proyecto de jardinería terminado con un diseño limpio y definido",
+      "project12": "Zona exterior mantenida con césped saludable y bordes cuidados",
+      "project13": "Jardín limpio y ordenado después de un mantenimiento profesional del césped"
+    }
+  },
+  "contact": {
+    "label": "Contáctanos",
+    "title": "Hablemos de tu espacio exterior",
+    "text": "Ponte en contacto para hablar de tu proyecto, hacer una pregunta o solicitar un presupuesto para servicios de jardinería.",
+
+    "form": {
+      "name": {
+        "label": "Nombre",
+        "placeholder": "Tu nombre"
+      },
+      "phone": {
+        "label": "Teléfono",
+        "placeholder": "Tu número de teléfono"
+      },
+      "service": {
+        "label": "Servicio",
+        "placeholder": "Selecciona un servicio",
+        "options": {
+          "lawnCare": "Cuidado del césped",
+          "gardenDesign": "Diseño de jardines",
+          "treeTrimming": "Poda de árboles",
+          "fullLandscaping": "Jardinería completa"
+        }
+      },
+      "message": {
+        "label": "Mensaje",
+        "placeholder": "Cuéntanos sobre tu proyecto"
+      }
+    },
+    "validation": {
+      "nameRequired": "Por favor, introduce tu nombre.",
+      "phoneRequired": "Por favor, introduce tu número de teléfono.",
+      "phoneInvalid": "Por favor, introduce un número de teléfono válido.",
+      "serviceRequired": "Por favor, selecciona un servicio.",
+      "messageRequired": "Por favor, escribe tu mensaje.",
+      "messageTooShort": "El mensaje debe tener al menos 10 caracteres."
+    },
+    "button": {
+      "submit": "Solicitar presupuesto",
+      "sending": "Enviando..."
+    },
+    "toast": {
+      "success": "Tu solicitud se ha enviado correctamente.",
+      "error": "Algo salió mal. Por favor, inténtalo de nuevo.",
+      "networkError": "Error de red. Por favor, inténtalo de nuevo."
+    }
+  },
+  "footer": {
+    "description": "Servicios de jardinería prácticos con atención al detalle, resultados limpios y un enfoque moderno.",
+    "navigationTitle": "Navegación",
+    "navigation": {
+      "home": "Inicio",
+      "services": "Servicios",
+      "about": "Sobre nosotros",
+      "projects": "Proyectos",
+      "contact": "Contacto"
+    },
+    "contactTitle": "Contacto",
+    "phoneAria": "Llamar a GreenWest al más 34 624 82 19 48",
+    "emailAria": "Enviar un correo electrónico a GreenWest",
+    "copyright": "© 2026 GreenWest. Todos los derechos reservados."
+  }
+}

@@ -91,6 +91,12 @@
   align-items: center;
 }
 
+.mobileActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 /* === BURGER BUTTON === */
 .burgerButton {
   font-size: 28px;
@@ -141,19 +147,36 @@
   gap: 16px;
 }
 
+.actions {
+  display: none;
+}
+
 /* === TABLET === */
-@media (min-width: 768px) {
+@media (min-width: 468px) {
+  .mobileActions {
+    gap: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
   .headerContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+
+  .mobileActions {
+    display: none;
+  }
+
   .burgerButton {
     display: none;
   }
 
   .headerBtn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .desktopNav {
@@ -163,15 +186,10 @@
   .navList {
     justify-content: center;
   }
-}
 
-/* === DESKTOP === */
-@media (min-width: 1024px) {
-  .topBar {
-    gap: 40px;
-  }
-
-  .navList {
+  .actions {
+    display: flex;
+    align-items: center;
     gap: 24px;
   }
 }
