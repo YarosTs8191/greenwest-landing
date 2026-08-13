@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 
 import styles from "./Header.module.css";
 
 function Header() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -13,11 +14,6 @@ function Header() {
 
   const closeMenu = () => {
     setIsOpen(false);
-  };
-
-  const changeLanguage = (language) => {
-    i18n.changeLanguage(language);
-    localStorage.setItem("language", language);
   };
 
   // Close the mobile menu when the Escape key is pressed.
@@ -56,40 +52,7 @@ function Header() {
             </a>
 
             <div className={styles.mobileActions}>
-              <div
-                className={`${styles.languageSwitcher} ${styles.mobileLanguageSwitcher}`}
-                aria-label="Language switcher"
-              >
-                <button
-                  type="button"
-                  className={
-                    i18n.language === "en" ? styles.activeLanguage : undefined
-                  }
-                  onClick={() => changeLanguage("en")}
-                >
-                  EN
-                </button>
-
-                <button
-                  type="button"
-                  className={
-                    i18n.language === "es" ? styles.activeLanguage : undefined
-                  }
-                  onClick={() => changeLanguage("es")}
-                >
-                  ES
-                </button>
-
-                <button
-                  type="button"
-                  className={
-                    i18n.language === "ca" ? styles.activeLanguage : undefined
-                  }
-                  onClick={() => changeLanguage("ca")}
-                >
-                  CA
-                </button>
-              </div>
+              <LanguageSwitcher />
 
               <button
                 className={styles.burgerButton}
@@ -134,41 +97,7 @@ function Header() {
           </nav>
 
           <div className={styles.actions}>
-            <div
-              className={styles.languageSwitcher}
-              aria-label="Language switcher"
-            >
-              <button
-                type="button"
-                className={
-                  i18n.language === "en" ? styles.activeLanguage : undefined
-                }
-                onClick={() => changeLanguage("en")}
-              >
-                EN
-              </button>
-
-              <button
-                type="button"
-                className={
-                  i18n.language === "es" ? styles.activeLanguage : undefined
-                }
-                onClick={() => changeLanguage("es")}
-              >
-                ES
-              </button>
-
-              <button
-                type="button"
-                className={
-                  i18n.language === "ca" ? styles.activeLanguage : undefined
-                }
-                onClick={() => changeLanguage("ca")}
-              >
-                CA
-              </button>
-            </div>
-
+            <LanguageSwitcher />
             <a className={styles.headerBtn} href="#contact">
               {t("header.quoteButton")}
             </a>
